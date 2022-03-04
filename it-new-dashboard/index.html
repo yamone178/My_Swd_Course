@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="icon" href="../img/logos/fav.png">
+    <title>Home</title>
+    <style>
+        .show-Slide{
+            display: block !important;
+            position: fixed;
+            z-index: 5;
+            width: 300px;
+            background: white;
+
+
+        }
+
+        @keyframes forSidebar {
+            from{
+                transform: translateX(-300px);
+            }
+
+            to{
+                transform: translateX(0px);
+            }
+        }
+
+        @media screen and (min-width: 768px){
+
+        }
+    </style>
+</head>
+<body class="bg-body">
+    <div class=" container-fluid">
+        <div class=" row">
+            <div class="col-lg-2 bg-white shadow-sm  ">
+                <div class="sidebar min-vh-100 d-none d-lg-block "  id="sidebarCol">
+                    <ul>
+                        <li class=" my-3">
+                            <div class="d-flex justify-content-center">
+                                <a href="index.html">
+                                    <img src="../img/logos/logo.PNG" height="40px" alt="" class="brand-logo">
+                                </a>
+                                <button class="btn btn-light d-block d-lg-none ms-5" id="hideSidebar">
+                                    <i class="fas fa-times"></i>
+                                </button>
+                            </div>
+                        </li>
+                        <li class="sidebar-spacer"></li>
+                        <li >
+                            <a href="index.html" class="sidebar-link active p-2"><i class=" fas fa-home fa-fw sidebar-link-icon"></i>Home</a>
+                        </li>
+                        <li>
+                            <a href="contact.html" class="sidebar-link "><i class=" fas fa-envelope fa-fw sidebar-link-icon"></i>Contact Message</a>
+                        </li>
+                        <li>
+                            <a href="calculator.html" class="sidebar-link "><i class=" fas fa-calculator fa-fw sidebar-link-icon"></i>Calculator</a>
+                        </li>
+                        <li>
+                            <a href="map.html" class="sidebar-link"><i class=" fas fa-map fa-fw sidebar-link-icon"></i>Map</a>
+                        </li>
+                        <li class="sidebar-spacer"></li>
+                        <li> <p class="sidebar-group-title"></p> My Test Menu</li>
+                        <li class="sidebar-spacer"></li>
+                        <li>
+                            <a href="create_article.html" class="sidebar-link"><i class=" fas fa-plus-circle fa-fw sidebar-link-icon"></i>Create article</a>
+                        </li>
+                        <li>
+                            <a href="article_list.html" class="sidebar-link"><i class=" fas fa-list fa-fw sidebar-link-icon"></i>Article List</a>
+                        </li>
+
+                        <li class="sidebar-spacer"></li>
+                        <li> <p class="sidebar-group-title"></p>ARTICLE MANAGER</li>
+                        <li class="sidebar-spacer"></li>
+                        <li>
+                            <a href="" class="sidebar-link"><i class=" fas fa-plus-circle fa-fw sidebar-link-icon"></i>Manage Category</a>
+                        </li>
+                        <li>
+                            <a href="article_list.html" class="sidebar-link"><i class=" fas fa-list fa-fw sidebar-link-icon"></i>Article List</a>
+                        </li>
+
+                        <li class="sidebar-spacer"></li>
+                        <li> <p class="sidebar-group-title"></p>USER MANAGEMENT</li>
+                        <li class="sidebar-spacer"></li>
+                        <li>
+                            <a href="" class="sidebar-link"><i class=" fas fa-plus-circle fa-fw sidebar-link-icon"></i>Your Profile</a>
+                        </li>
+                        <li>
+                            <a href="" class="sidebar-link"><i class=" fas fa-list fa-fw sidebar-link-icon"></i>Change Password</a>
+                        </li>
+                        <li>
+                            <a href="" class="sidebar-link"><i class=" fas fa-list fa-fw sidebar-link-icon"></i>Update Name & Email</a>
+                        </li>
+                        <li>
+                            <a href="" class="sidebar-link"><i class=" fas fa-list fa-fw sidebar-link-icon"></i>Upload Photo</a>
+                        </li>
+                        <li>
+                            <a href="../it-news/signin.html" class=" btn
+                             btn-outline-primary w-100">Logout</a>
+                        </li>
+
+
+
+                        
+
+
+
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-12 col-lg-10 my-3">
+                <div class="content min-vh-100">
+                    <div class=" container-fluid px-0">
+                        <div class="d-lg-flex justify-content-lg-between  bg-primary p-2 mb-4">
+                            <div class=" d-flex  justify-content-between  ">
+                                <div class="">
+                                    <button class="btn btn-light d-block d-lg-none " id="showSidebar">
+                                        <i class="fas fa-bars "></i>
+                                    </button>
+                                </div>
+                                <div class="d-flex d-lg-flex">
+
+                                    <input class="search-input form-control me-2 rounded-2 border-0 " placeholder="Search Everything" type="search">
+                                    <button class=" btn btn-light text-primary"><i class=" fas fa-search"></i></button>
+                                </div>
+
+                            </div>
+
+
+                            <div class="dropdown d-none d-lg-block">
+                                <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                  Dropdown button
+                                </button>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                  <li><a class="dropdown-item" href="#">Home</a></li>
+                                  <li><a class="dropdown-item" href="#">about</a></li>
+                                  <li><a class="dropdown-item" href="#">Contact</a></li>
+                                </ul>
+                              </div>
+
+                        </div>
+
+                        <div class="container-fluid  px-0">
+                            <div class="row g-2">
+                                <div class="col-12 col-md-6 col-xl-3">
+                                    <div class="bg-white shadow-sm d-flex justify-content-center p-3">
+                                        <i class="fas fa-suitcase text-primary fa-3x"></i>
+                                       <div class="mb-0 ms-3">
+                                           <p class="mb-0 fa-fw fw-bold">24</p>
+                                           <p class="mb-0 text-black-50">total Job</p>
+                                       </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-xl-3">
+                                    <div class="bg-white shadow-sm d-flex justify-content-center  p-3">
+                                        <i class="fas fa-suitcase text-primary fa-3x"></i>
+                                        <div class="mb-0 ms-3">
+                                            <p class="mb-0 fa-fw fw-bold">544</p>
+                                            <p class="mb-0 text-black-50">Total user</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-xl-3">
+                                    <div class="bg-white shadow-sm d-flex justify-content-center  p-3">
+                                        <i class="fas fa-suitcase text-primary fa-3x"></i>
+                                        <div class="mb-0 ms-3">
+                                            <p class="mb-0 fa-fw fw-bold">214</p>
+                                            <p class="mb-0 text-black-50">total order</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-md-6 col-xl-3">
+                                    <div class="bg-white shadow-sm d-flex justify-content-center  p-3">
+                                        <i class="fas fa-suitcase text-primary fa-3x"></i>
+                                        <div class="mb-0 ms-3">
+                                            <p class="mb-0 fa-fw fw-bold">16</p>
+                                            <p class="mb-0 text-black-50">total Places</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12 col-xl-7">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <canvas id="viewerChart" style="width: 100%" height="300" ></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-5 d-flex align-items-end position-relative">
+                                    <div class="w-100">
+                                        <div class="card " >
+
+
+                                            <div class="card-body ">
+                                                <div class="float-md-start ">
+                                                    <p class="fw-bold">i phone 13 pro & pro max</p>
+                                                    <p class="text-black-50 mb-0">From 1649 S$ &</p>
+                                                    <p class="text-black-50 mb-0">From 1799 S$</p>
+                                                </div>
+                                                <img src="../img/logos/iPhone-11-PNG-Picture.png" class="d-block d-md-block d-lg-none  d-xl-none w-25 ms-md-5"  alt="">
+
+
+
+                                            </div>
+
+
+
+
+
+                                        </div>
+
+                                    </div>
+                                    <div class="position-absolute image" style="left: 50%; bottom: 30px">
+                                        <img src="../img/logos/iPhone-11-PNG-Picture.png" class="d-none d-lg-block" width="200px" alt="">
+
+                                    </div>
+
+                                </div>
+                                <div class="col-12 col-xl-5">
+                                    <div class="card">
+                                        <div class="card-body">
+                                            <canvas id="catchart" style="width: 100%" height="300" ></canvas>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 col-xl-7">
+                                    <div class="card">
+                                        <div class="card-header">
+                                            <div class="card-title">Subscribe List</div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="table table-hover ">
+                                                <table class="w-100">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>Name</th>
+                                                            <th>Company</th>
+                                                            <th>Start Date</th>
+                                                            <th>Status</th>
+                                                            <th>Amount</th>
+                                                            <th>Action</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody id="t-body"></tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+    <script src="../node_modules/chart.js/dist/chart.min.js"></script>
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+
+    let sidebarCol=document.getElementById("sidebarCol");
+    let showSidebar=document.getElementById("showSidebar");
+    let hideSidebar=document.getElementById("hideSidebar");
+
+    showSidebar.addEventListener("click",function (){
+        sidebarCol.classList.toggle("show-Slide");
+    })
+
+    hideSidebar.addEventListener("click",function (){
+        sidebarCol.classList.toggle("show-Slide");
+    })
+
+
+// chart
+    const viewerChart = document.getElementById('viewerChart').getContext('2d');
+    const myChart = new Chart(viewerChart, {
+        type: 'line',
+        data: {
+            labels: ['6/1/2022','5/1/2022','4/1/2022','3/1/2022','2/1/2022','1/1/2022','31/12/2021'],
+            datasets: [{
+                label: '# Viewer',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: '#191970',
+                borderColor: 'green',
+                borderWidth: 1
+            },
+
+                {
+                    label: '# Viewer',
+                    data: [20, 6, 8, 6, 7, 0],
+                    backgroundColor: 'red',
+                    borderColor: 'yellow',
+                    borderWidth: 1
+                }
+
+
+
+
+            ]
+
+
+        },
+
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+    const ctx = document.getElementById('catchart').getContext('2d');
+    const myCatChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+            datasets: [{
+                label: '# of Votes',
+                data: [12, 19, 3, 5, 2, 3],
+                backgroundColor: [
+                    'rgba(255, 99, 132, 0.2)',
+                    'rgba(54, 162, 235, 0.2)',
+                    'rgba(255, 206, 86, 0.2)',
+                    'rgba(75, 192, 192, 0.2)',
+                    'rgba(153, 102, 255, 0.2)',
+                    'rgba(255, 159, 64, 0.2)'
+                ],
+                borderColor: [
+                    'rgba(255, 99, 132, 1)',
+                    'rgba(54, 162, 235, 1)',
+                    'rgba(255, 206, 86, 1)',
+                    'rgba(75, 192, 192, 1)',
+                    'rgba(153, 102, 255, 1)',
+                    'rgba(255, 159, 64, 1)'
+                ],
+                borderWidth: 1
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
+
+let list=[
+    {
+        name: "User1",
+        company :"Usercompany1",
+        Start_date:"Jan 1,2019",
+        status :"Open",
+        Amount :"Amount"
+    },
+
+    {
+        name: "User2",
+        company :"Usercompany2",
+        Start_date:"Jan 1,2019",
+        status :"Open",
+        Amount :"Amount"
+    },
+
+    {
+        name: "User3",
+        company :"Usercompany3",
+        Start_date:"Jan 1,2019",
+        status :"Close",
+        Amount :"Amount"
+    }
+]
+let table_body=document.getElementById("t-body")
+    list.forEach(function (x){
+        table_body.innerHTML +=`    <tr>
+                                    <td>${x.name}</td>
+                                    <td>${x.company}</td>
+                                    <td>${x.Start_date}</td>
+                                    <td>${x.status}</td>
+                                    <td>${x.Amount}</td> </tr>`
+    })
+</script>
+</body>
+</html>
+
+
+
+
+
+</div>
